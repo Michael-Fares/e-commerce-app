@@ -1,0 +1,27 @@
+.app-header {
+  background-color: orange;
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.links li {
+  display: inline-block;
+  margin: 0 0.5rem;
+  transition: ease-in-out all 0.1s;
+}
+
+.links li:hover {
+  color: darkred;
+}
+
+.links li:active {
+  transform: scale(0.9);
+}
+
+.links span {
+  margin-left: 0.5rem;
+}

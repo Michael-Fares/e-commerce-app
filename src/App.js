@@ -6,6 +6,7 @@ import {
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
+import Header from './components/header/Header'
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -17,11 +18,7 @@ function App() {
   },[])
   return (
   <BrowserRouter>
-      <>
-      <header className="app-header">
-        <h1>Welcome to our store</h1>
-      </header>
-    </>
+    <Header />
     <Router products={products}/>
   </BrowserRouter>
   );
