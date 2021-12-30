@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router'
 
 
-import Products from './components/Products'
+import Products from './components/products/Products'
 import Cart from './components/Cart'
 
 const Router = ({products}) => {
