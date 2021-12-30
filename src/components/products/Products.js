@@ -10,11 +10,9 @@ const Products = ({products}) => {
           <li className="product-card" key={product.id}>
             <h4 className="product-name">{product.title}</h4>
             <img className="product-image" src={product.image} alt={product.title}/>
-            <h4 className="product-price">{product.price}</h4>
+            <h4 className="product-price">{`$${product.price.toFixed(2)}`}</h4>
             <p className="product-description">{product.description}</p>
-            <div className="product-card-buttons">
-              <button>add to cart</button>
-            </div>
+            <button className="add-to-cart-btn">add to cart</button>
           </li>
         )
       })}

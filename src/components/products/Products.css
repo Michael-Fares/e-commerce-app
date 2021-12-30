@@ -7,7 +7,6 @@
 }
 /* flex layout for card, centered on main axis, space bettween on cross axis so buttons on bottom always in same place. */
 .product-card {
-  border: 1px solid black;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -15,13 +14,34 @@
   justify-content: space-between;
   align-items: center;
   margin: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
 }
 .product-image {
-  width: 100%;
-  max-width: 200px;
+  width: 30%;
   display: block;
   object-fit: cover;
 }
 .product-description {
   font-size: 0.75rem;
+  color: #777;
+}
+.add-to-cart-btn {
+  background-color: darkred;
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+  font-weight: bold;
+}
+.add-to-cart-btn:hover {
+  background-color: black;
+  color: white;
+}
+.add-to-cart-btn:active {
+  transform: scale(0.9)
 }
