@@ -13,7 +13,9 @@
   margin: 0 0.5rem;
   transition: ease-in-out all 0.1s;
 }
-
+.app-name {
+  flex-grow: 1;
+}
 .links li:hover {
   color: darkred;
 }
@@ -30,4 +32,12 @@
   padding: 0.25rem 0.5rem;
   border-radius: 500px;
   vertical-align: top;
+}
+.go-back {
+  
+}
+@media screen and (max-width: 600px) {
+  .app-name {
+    font-size: 1.25rem;
+  }
 }

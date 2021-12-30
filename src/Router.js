@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router'
 
 
 import Products from './components/products/Products'
-import Cart from './components/Cart'
+import Cart from './components/cart/Cart'
 
 const Router = ({products, cartItems, handleAddToCart}) => {
   return (

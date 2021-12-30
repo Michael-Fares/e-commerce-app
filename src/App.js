@@ -33,7 +33,7 @@ function App() {
   return (
   <BrowserRouter>
     <Header cartItems={cartItems} />
-    <Router products={products} handleAddToCart={handleAddToCart}/>
+    <Router products={products} handleAddToCart={handleAddToCart} cartItems={cartItems}/>
   </BrowserRouter>
   );
 }

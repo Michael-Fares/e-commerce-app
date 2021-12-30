@@ -1,0 +1,73 @@
+.cart-item-image {
+  width: 50px;
+}
+.cart-item-card {
+  border: 1px solid black;
+  padding: 1rem;
+}
+.quantity-actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.quantity-button {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.1s ease-in-out all;
+  width: 2rem;
+  height: 2rem;
+}
+.decrease {
+  background-color: darkred;
+}
+.increase {
+  background-color: lightseagreen;
+}
+.quantity-button:active {
+ transform: scale(0.9);
+}
+.empty-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  gap: 0.5rem;
+}
+
+.go-back {
+  background-color: darkred;
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+  font-weight: bold;
+}
+.go-back:hover {
+  background-color: black;
+  color: white;
+}
+.go-back:active {
+  transform: scale(0.9)
+}
+.delete {
+  background-color: tomato;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+}
+.delete:hover {
+  background-color: black;
+}
