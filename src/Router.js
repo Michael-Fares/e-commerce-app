@@ -5,11 +5,11 @@ import { Route, Routes } from 'react-router'
 import Products from './components/products/Products'
 import Cart from './components/Cart'
 
-const Router = ({products}) => {
+const Router = ({products, cartItems, handleAddToCart}) => {
   return (
       <Routes>
-          <Route path="/" exact element={<Products products={products}/>} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/" exact element={<Products products={products} handleAddToCart={handleAddToCart} cartItems={cartItems}/>} />
+          <Route path="/cart" element={<Cart handleAddToCart={handleAddToCart} cartItems={cartItems}/>} />
       </Routes>
   )
 };

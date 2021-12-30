@@ -25,3 +25,9 @@
 .links span {
   margin-left: 0.5rem;
 }
+.cart-total {
+  background-color: red;
+  padding: 0.25rem 0.5rem;
+  border-radius: 500px;
+  vertical-align: top;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Products.css'
 
-const Products = ({products}) => {
+const Products = ({products, handleAddToCart}) => {
   console.log(products, 'products')
   return (
     <ul className="products-container">
@@ -12,7 +12,7 @@ const Products = ({products}) => {
             <img className="product-image" src={product.image} alt={product.title}/>
             <h4 className="product-price">{`$${product.price.toFixed(2)}`}</h4>
             <p className="product-description">{product.description}</p>
-            <button className="add-to-cart-btn">add to cart</button>
+            <button className="add-to-cart-btn" onClick={() => handleAddToCart(product)}>add to cart</button>
           </li>
         )
       })}
