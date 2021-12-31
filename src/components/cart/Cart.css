@@ -1,3 +1,17 @@
+.cart-header {
+  position: fixed;
+  top: 1;
+  background-color: rgba(0,0,0, 0.8);
+  color: white;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-item-list {
+  margin-top: 5rem;
+}
 .cart-item-image {
   width: 50px;
 }
@@ -10,6 +24,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
+  max-width: 320px;
 }
 .quantity-button {
   padding: 0.25rem 0.5rem;
@@ -24,9 +39,11 @@
 }
 .decrease, .delete {
   background-color: tomato;
+  flex: 1;
 }
 .increase {
   background-color: lightseagreen;
+  flex: 1;
 }
 .quantity-button:active {
  transform: scale(0.9);
@@ -66,7 +83,25 @@
   outline: none;
   cursor: pointer;
   transition: 0.2s ease-in-out all;
+  text-transform: uppercase;
 }
-.delete:hover {
-  background-color: black;
+
+.checkout-button {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  color: white;
+  background-color: royalblue;
+  box-shadow: 0 0 10px orange;
+  transition: 0.1s ease-in-out all;
+  cursor: pointer;
+}
+.checkout-button:hover {
+  color: royalblue;
+  background-color: orange;
+  box-shadow: 0 0 10px white;
+}
+.checkout-button:active {
+  transform: scale(0.9);
 }

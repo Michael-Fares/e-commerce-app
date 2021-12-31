@@ -33,11 +33,9 @@
   border-radius: 500px;
   vertical-align: top;
 }
-.go-back {
-  
-}
+
 @media screen and (max-width: 600px) {
   .app-name {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }

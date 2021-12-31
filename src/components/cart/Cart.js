@@ -6,13 +6,17 @@ const Cart = ({cartItems, handleDelete, handleIncrement, handleDecrement}) => {
   const totalPrice = cartItems.map(item => item.price * item.quantity).reduce((current, next) => current + next, 0)
   return (
   <>
-    <h2>Cart Summary:</h2>
+   
     {cartItems.length ? 
     <>
-    <div>
-      <p>{`Total: $${totalPrice.toFixed(2)}`}</p>
+    <div className="cart-header">
+      <div className="cart-summary"> 
+        <h2>Cart Summary:</h2>
+        <p>{`Total: $${totalPrice.toFixed(2)}`}</p>
+      </div>
+      <button className="checkout-button">Checkout</button>
      </div>
-    <ul>
+    <ul className="cart-item-list">
     {cartItems.map(item => {
       return (
        <li className="cart-item-card" key={item.id}>
