@@ -15,11 +15,11 @@ const Header = ({ cartItems }) => {
   return (
     <>
       <header className="app-header">
-        <h1 className="app-name">Fusion Fashion</h1>
+        <h1 className="app-name">Fusion Fashions</h1>
         <nav>
           <ul className="links">
             <Link to="/">
-              <li><FontAwesomeIcon icon={faStore} /><span>Store</span></li>
+            <li><FontAwesomeIcon icon={faStore} /><span>Store</span></li>
             </Link>
             <Link to="/cart"><li><FontAwesomeIcon icon={faShoppingCart} />
             

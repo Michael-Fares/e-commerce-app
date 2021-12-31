@@ -8,14 +8,15 @@
   justify-content: space-between;
   align-items: center; 
 }
+.app-name {
+  font-family: 'Quicksand', sans-serif;
+}
 .links li {
   display: inline-block;
   margin: 0 0.5rem;
   transition: ease-in-out all 0.1s;
 }
-.app-name {
-  flex-grow: 1;
-}
+
 .links li:hover {
   color: darkred;
 }
@@ -31,7 +32,7 @@
   background-color: red;
   padding: 0.25rem 0.5rem;
   border-radius: 500px;
-  vertical-align: top;
+  margin: 0;
 }
 
 @media screen and (max-width: 600px) {
