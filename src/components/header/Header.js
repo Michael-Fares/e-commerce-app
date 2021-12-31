@@ -10,8 +10,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ cartItems }) => {
-  const itemTotal = cartItems.map(item => item.quantity).reduce((current,next) => current + next, 0)
-  console.log(itemTotal)
+  const itemCount = cartItems.map(item => item.quantity).reduce((current,next) => current + next, 0)
+  console.log(itemCount)
   return (
     <>
       <header className="app-header">
@@ -24,7 +24,7 @@ const Header = ({ cartItems }) => {
             <Link to="/cart"><li><FontAwesomeIcon icon={faShoppingCart} />
             
             <span>Cart</span>
-            {itemTotal > 0 && <span className="cart-total">{itemTotal}</span>}
+            {itemCount > 0 && <span className="cart-total">{itemCount}</span>}
             </li>
             </Link>
           </ul>

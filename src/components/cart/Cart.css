@@ -22,8 +22,8 @@
   width: 2rem;
   height: 2rem;
 }
-.decrease {
-  background-color: darkred;
+.decrease, .delete {
+  background-color: tomato;
 }
 .increase {
   background-color: lightseagreen;
@@ -60,7 +60,6 @@
   transform: scale(0.9)
 }
 .delete {
-  background-color: tomato;
   color: white;
   padding: 0.5rem;
   border: none;
