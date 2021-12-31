@@ -24,6 +24,11 @@ function App() {
     }
   }
 
+  const handleDelete = (id) => {
+    const updatedCart = cartItems.filter(item => item.id !== id)
+    setCartItems(updatedCart)
+  }
+
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products`)
       .then(res =>  setProducts(res.data))
@@ -33,7 +38,7 @@ function App() {
   return (
   <BrowserRouter>
     <Header cartItems={cartItems} />
-    <Router products={products} handleAddToCart={handleAddToCart} cartItems={cartItems}/>
+    <Router products={products} handleAddToCart={handleAddToCart} handleDelete={handleDelete} cartItems={cartItems}/>
   </BrowserRouter>
   );
 }
