@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom' 
 import './Cart.css'
 
-const Cart = ({cartItems, handleDelete}) => {
+const Cart = ({cartItems, handleDelete, handleIncrement, handleDecrement}) => {
   const totalPrice = cartItems.map(item => item.price * item.quantity).reduce((current, next) => current + next, 0)
   return (
   <>
@@ -22,8 +22,9 @@ const Cart = ({cartItems, handleDelete}) => {
           <span className="cart-item-price">{`$${item.price.toFixed(2)}`}</span>
           <div className="quantity-actions">
             <p className="cart-item-quanitity">{`Quantity: ${item.quantity}`}</p>
-            {item.quantity === 1 ? <button className="delete" onClick={()=>handleDelete(item.id)}>Remove</button> : <button className="quantity-button decrease">-</button>}
-            <button className="quantity-button increase">+</button>
+            {item.quantity === 1 ? <button className="delete" onClick={()=>handleDelete(item.id)}>Remove</button> : <button className="quantity-button decrease"
+            onClick={()=>handleDecrement(item.id)}>-</button>}
+            <button className="quantity-button increase" onClick={()=>handleIncrement(item.id)}>+</button>
           </div>
          </div>
        </li>

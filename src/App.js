@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-// changes
 import Header from './components/header/Header'
 
 function App() {
@@ -29,6 +28,16 @@ function App() {
     setCartItems(updatedCart)
   }
 
+ const handleIncrement = (id) => {
+    const itemToIncrement = cartItems.find(item => item.id === id)
+    setCartItems(cartItems.map(item => item === itemToIncrement ? {...itemToIncrement, quantity: itemToIncrement.quantity + 1 } : item))
+ }
+
+ const handleDecrement = (id) => {
+  const itemToDecrement = cartItems.find(item => item.id === id)
+  setCartItems(cartItems.map(item => item === itemToDecrement ? {...itemToDecrement, quantity: itemToDecrement.quantity - 1 } : item))
+}
+
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products`)
       .then(res =>  setProducts(res.data))
@@ -38,7 +47,8 @@ function App() {
   return (
   <BrowserRouter>
     <Header cartItems={cartItems} />
-    <Router products={products} handleAddToCart={handleAddToCart} handleDelete={handleDelete} cartItems={cartItems}/>
+    <Router products={products} handleAddToCart={handleAddToCart} handleDelete={handleDelete} cartItems={cartItems} handleIncrement={handleIncrement} 
+    handleDecrement={handleDecrement}/>
   </BrowserRouter>
   );
 }
