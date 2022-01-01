@@ -29,9 +29,13 @@
   margin-left: 0.5rem;
 }
 .cart-total {
+  content:attr(data-size);
   background-color: red;
   padding: 0.25rem 0.5rem;
-  border-radius: 500px;
+  border-radius: 50%;
+  position:relative;
+  left:-8px;
+  top:-10px;
   margin: 0;
 }
 
