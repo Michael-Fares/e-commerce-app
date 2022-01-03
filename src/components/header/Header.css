@@ -5,8 +5,8 @@
   padding: 1rem;
   box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center; 
 }
 .app-name {
   font-family: 'Quicksand', sans-serif;
@@ -14,6 +14,7 @@
 .links li {
   display: inline-block;
   margin: 0 0.5rem;
+  padding: 0.5rem;
   transition: ease-in-out all 0.1s;
 }
 
@@ -28,15 +29,20 @@
 .links span {
   margin-left: 0.5rem;
 }
+.cart {
+  position: relative;
+  display: inline-block;
+}
 .cart-total {
-  content:attr(data-size);
   background-color: red;
   padding: 0.25rem 0.5rem;
-  border-radius: 50%;
-  position:relative;
-  left:-8px;
-  top:-10px;
-  margin: 0;
+  border-radius: 500px;
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+  top: -20px;
+  right: -25px;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 600px) {

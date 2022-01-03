@@ -18,15 +18,16 @@ const Header = ({ cartItems }) => {
         <h1 className="app-name">Fusion Fashions</h1>
         <nav>
           <ul className="links">
-            <Link to="/">
-            <li><FontAwesomeIcon icon={faStore} /><span>Store</span></li>
-            </Link>
-            <Link to="/cart"><li><FontAwesomeIcon icon={faShoppingCart} />
             
-            <span>Cart</span>
+            <li><Link to="/"><FontAwesomeIcon icon={faStore} /><span>Store</span></Link></li>
+            
+            <li><Link className="cart" to="/cart"><FontAwesomeIcon icon={faShoppingCart} />
+            
+            <span className=".cart">Cart</span>
             {itemCount > 0 && <span className="cart-total">{itemCount}</span>}
-            </li>
             </Link>
+            </li>
+           
           </ul>
         </nav>
       </header>
