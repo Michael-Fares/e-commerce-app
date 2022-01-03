@@ -31,15 +31,12 @@
 }
 .cart {
   position: relative;
-  display: inline-block;
 }
 .cart-total {
   background-color: red;
   padding: 0.25rem 0.5rem;
   border-radius: 500px;
   position: absolute;
-  text-align: center;
-  display: inline-block;
   top: -20px;
   right: -25px;
   font-size: 1rem;
