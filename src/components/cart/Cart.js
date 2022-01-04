@@ -1,9 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom' 
 import './Cart.css'
+import axios from 'axios'
 
 const Cart = ({cartItems, handleDelete, handleIncrement, handleDecrement}) => {
   const totalPrice = cartItems.map(item => item.price * item.quantity).reduce((current, next) => current + next, 0)
+  
+  // send only the item id and the quantity to the server. NOT the price. Price in cents verified on server.
+  const checkoutItemsToServer = cartItems.map(item => {
+    return {
+    id: item.id, 
+    quantity: item.quantity
+  }
+  })
+
+  const handleCheckout = (e) => {
+    e.preventDefault()
+    axios.post('http://localhost:4001/create-checkout-session', {
+      checkoutItemsToServer
+    })
+      .then(res => console.log(res.data))
+      .catch(error => console.log('There was an error', error))
+  }
+
   return (
   <>
    
@@ -14,7 +33,7 @@ const Cart = ({cartItems, handleDelete, handleIncrement, handleDecrement}) => {
         <h2>Cart Summary:</h2>
         <p>{`Total: $${totalPrice.toFixed(2)}`}</p>
       </div>
-      <button className="checkout-button">Checkout</button>
+      <button className="checkout-button" onClick={handleCheckout}>Checkout</button>
      </div>
     <ul className="cart-item-list">
     {cartItems.map(item => {
