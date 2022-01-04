@@ -19,8 +19,11 @@ const Cart = ({cartItems, handleDelete, handleIncrement, handleDecrement}) => {
     axios.post('http://localhost:4001/create-checkout-session', {
       checkoutItemsToServer
     })
-      .then(res => console.log(res.data))
-      .catch(error => console.log('There was an error', error))
+      .then(res => {
+        const checkoutUrl = res.data.url
+        window.location = checkoutUrl
+      })
+      .catch(error => console.error('There was an error', error))
   }
 
   return (
