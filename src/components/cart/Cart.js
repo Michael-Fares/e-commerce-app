@@ -16,7 +16,7 @@ const Cart = ({cartItems, handleDelete, handleIncrement, handleDecrement}) => {
 
   const handleCheckout = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:4001/create-checkout-session', {
+    axios.post('https://sheltered-fortress-26931.herokuapp.com/create-checkout-session', {
       checkoutItemsToServer
     })
       .then(res => {

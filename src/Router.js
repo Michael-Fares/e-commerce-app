@@ -11,7 +11,7 @@ const Router = ({products, cartItems, handleAddToCart, handleDelete, handleIncre
       <Routes>
           <Route path="/" exact element={<Products products={products} handleAddToCart={handleAddToCart} cartItems={cartItems} />} />
           <Route path="/cart" element={<Cart handleAddToCart={handleAddToCart} handleDelete={handleDelete} handleIncrement={handleIncrement} cartItems={cartItems} handleDecrement={handleDecrement}/>} />
-          <Route path="/success" element={<Success/>} />
+          <Route path="/success"  element={<Success cartItems={cartItems}/>} />
       </Routes>
   )
 };
