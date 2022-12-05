@@ -47,7 +47,7 @@ function App() {
   return (
   <BrowserRouter>
     <Header cartItems={cartItems} />
-    <Router products={products} cartItems={cartItems} handleAddToCart={handleAddToCart} handleDelete={handleDelete} cartItems={cartItems} handleIncrement={handleIncrement} 
+    <Router products={products} cartItems={cartItems} handleAddToCart={handleAddToCart} handleDelete={handleDelete} handleIncrement={handleIncrement} 
     handleDecrement={handleDecrement}/>
   </BrowserRouter>
   );
